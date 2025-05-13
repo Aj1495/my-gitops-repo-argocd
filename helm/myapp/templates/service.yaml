@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ .Chart.Name }}
 spec:
-  type: NodePort  # Change to LoadBalancer if you want a cloud load balancer
+  type: LoadBalancer   # <--- Change this line!
   selector:
     app: {{ .Chart.Name }}
   ports:
